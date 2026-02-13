@@ -78,17 +78,17 @@ body {
 /* Letter – upgraded style for more engagement */
 .letter {
     position: absolute;
-    top: 20px;
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 320px;              /* slightly smaller for better screen fit */
+    width: 350px;              /* slightly smaller for better screen fit */
     max-height: 400px;         /* fits vertically */
     padding: 25px 30px;
     background: linear-gradient(180deg, #fff8f0 0%, #ffe8e0 100%);
     background-image: url('paper-texture.png'); /* optional paper texture */
     background-size: cover;
     background-repeat: no-repeat;
-    color: #d32f2f;
+    color: white;
     font-family: "Nunito", sans-serif;
     font-size: 16px;
     border-radius: 15px;       /* more rounded corners for a real letter */
