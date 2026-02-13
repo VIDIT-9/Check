@@ -1,14 +1,19 @@
 const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Are you positive?",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
+    "😏 NO? Really??",
+    "🙄 Wow. Bold of you.",
+    "🥲 My confidence just died.",
+    "💔 Congratulations, you hurt pixels.",
+    "😤 I trusted you.",
+    "😒 Even the YES button is judging you.",
+    "🫠 This is emotional damage.",
+    "🤨 Are you enjoying this?",
+    "😑 Plot twist: YES was the right answer.",
+    "😩 The NO button is working too well.",
+    "😈 You think you’re strong? Click YES.",
+    "😂 Okay okay, you win… now press YES.",
+    "🥺 Last warning before I cry.",
+    "😭 I am literally crying in JavaScript.",
+    "😍 JUST KIDDING — PRESS YES ❤️"
 ];
 
 let messageIndex = 0;
