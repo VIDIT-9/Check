@@ -61,41 +61,46 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(createHeart, 300);
 
     openBtn.addEventListener("click", () => {
-        // Animate flap open
-        flap.style.transform = "rotateX(-180deg)";
-        // Show letter
-        letter.style.display = "block";
+    // Animate flap open
+    flap.style.transform = "rotateX(-180deg)";
+    
+    // Show letter
+    letter.style.display = "block";
 
-        // Typing effect line by line
-        let lineIndex = 0;
+    // Adjust starting position of letter (move slightly higher)
+    letter.style.top = "20px"; // was 50px before
 
-        function typeLine() {
-            if (lineIndex >= messageLines.length) return;
+    // Typing effect line by line
+    let lineIndex = 0;
 
-            const line = document.createElement("p");
-            letter.appendChild(line);
+    function typeLine() {
+        if (lineIndex >= messageLines.length) return;
 
-            let charIndex = 0;
+        const line = document.createElement("p");
+        letter.appendChild(line);
 
-            function typeChar() {
-                if (charIndex < messageLines[lineIndex].length) {
-                    line.textContent += messageLines[lineIndex].charAt(charIndex);
-                    charIndex++;
-                    setTimeout(typeChar, 50);
-                } else {
-                    lineIndex++;
-                    setTimeout(typeLine, 300);
-                }
+        let charIndex = 0;
+
+        function typeChar() {
+            if (charIndex < messageLines[lineIndex].length) {
+                line.textContent += messageLines[lineIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeChar, 30); // faster typing (was 50ms)
+            } else {
+                lineIndex++;
+                setTimeout(typeLine, 200); // smaller pause between lines (was 300ms)
             }
-
-            typeChar();
         }
 
-        typeLine();
+        typeChar();
+    }
 
-        // Remove the open button
-        openBtn.style.display = "none";
-    });
+    typeLine();
+
+    // Remove the open button
+    openBtn.style.display = "none";
+});
+
 });
 </script>
 
