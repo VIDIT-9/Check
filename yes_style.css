@@ -78,10 +78,10 @@ body {
 /* Letter – upgraded style for more engagement */
 .letter {
     position: absolute;
-    top: 20px;            /* starting position near flap */
-    left: 50%;
+    top: 00px;            /* starting position near flap */
+    left: 100%;
     transform: translateX(-50%);  /* center the letter */
-    width: 350px;         /* same as before */
+    width: 500px;         /* same as before */
     padding: 25px 30px;   /* slightly more padding */
     background: linear-gradient(180deg, #fff8f0 0%, #ffe8e0 100%); /* soft cream/pink */
     color: #d32f2f;       /* red text for love */
