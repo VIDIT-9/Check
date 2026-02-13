@@ -1,19 +1,13 @@
 const messages = [
-    "😏 NO? Really??",
-    "🙄 Wow. Bold of you.",
-    "🥲 My confidence just died.",
-    "💔 Congratulations, you hurt pixels.",
-    "😤 I trusted you.",
-    "😒 Even the YES button is judging you.",
-    "🫠 This is emotional damage.",
-    "🤨 Are you enjoying this?",
-    "😑 Plot twist: YES was the right answer.",
-    "😩 The NO button is working too well.",
-    "😈 You think you’re strong? Click YES.",
-    "😂 Okay okay, you win… now press YES.",
-    "🥺 Last warning before I cry.",
-    "😭 I am literally crying in JavaScript.",
-    "😍 JUST KIDDING — PRESS YES ❤️"
+    "NO... Really?? 😏",
+    "Maaniii yrrr.... kyu kr rhi h 🙁",
+    "Mjhe bura lg rha h 😔",
+    "Tjhe mjhe pareshan krne me bahut mzee aate h naa 😒?",
+    "This is Last warning Maanii before.... 🧐",
+    "Last warning before I cry 🥺",
+    "Maaniii... You are hurting me 😫",
+    "I am literally crying 😭",
+    "💔"
 ];
 
 let messageIndex = 0;
