@@ -17,8 +17,6 @@
             I always knew you would say yes ❤️
         </h1>
 
-        <p class="love_message" id="loveText"></p>
-
         <button class="reveal-btn" id="revealBtn">
             Click for Surprise 💌
         </button>
@@ -26,22 +24,47 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-
     const message = "You just made me the happiest person alive 🥹💖";
     const btn = document.getElementById("revealBtn");
+    const container = document.querySelector(".container");
+
+    // Floating hearts generator
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+
+    setInterval(createHeart, 300);
 
     btn.addEventListener("click", function() {
-        // Create a <p> element to show the message
+        // Create paragraph for typing effect
         const msgPara = document.createElement("p");
-        msgPara.textContent = message;
         msgPara.classList.add("love_message");
         msgPara.style.fontSize = "24px";
         msgPara.style.marginTop = "20px";
 
-        // Replace the button with the message
+        // Replace button with paragraph
         btn.parentNode.replaceChild(msgPara, btn);
-    });
 
+        // Typing effect
+        let i = 0;
+        function typeWriter() {
+            if (i < message.length) {
+                msgPara.textContent += message.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        typeWriter();
+    });
 });
 </script>
 
