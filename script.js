@@ -1,7 +1,7 @@
 // script.js
 
 const messages = [
-    "Babbyyy.... kya kr rhe h 🙁",
+    "Babbyyy.... kya kr rhe ho 🙁",
     "Tjhe pareshan krne me bahut mzee aate h naa 😒",
     "Mjhe bura lg rha h 😔",
     "This is Last warning Maanii, before.... 🧐",
