@@ -85,10 +85,10 @@ document.addEventListener("DOMContentLoaded", function() {
             if (charIndex < messageLines[lineIndex].length) {
                 line.textContent += messageLines[lineIndex].charAt(charIndex);
                 charIndex++;
-                setTimeout(typeChar, 30); // faster typing (was 50ms)
+                setTimeout(typeChar, 15); // faster typing (was 50ms)
             } else {
                 lineIndex++;
-                setTimeout(typeLine, 200); // smaller pause between lines (was 300ms)
+                setTimeout(typeLine, 100); // smaller pause between lines (was 300ms)
             }
         }
 
