@@ -78,16 +78,17 @@ body {
 /* Letter */
 /* Letter – restored cream/pink style */
 /* Letter – soft cream/pink with slight transparency */
+/* Letter – more transparent and scrollable */
 .letter {
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 350px;              
-    max-height: 400px;         
+    max-height: 380px;         /* enough height to fit but allow scroll */
     padding: 25px 30px;        
-    background: rgba(255, 248, 240, 0.85); /* cream/pink with 85% opacity */
-    color: #d32f2f;            /* red text */
+    background: rgba(255, 248, 240, 0.65); /* more transparent cream/pink */
+    color: #d32f2f;            
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     border-radius: 15px;       
@@ -95,8 +96,8 @@ body {
     box-shadow: 0 12px 25px rgba(0,0,0,0.25); 
     line-height: 1.6;
     text-align: left;
-    border: 2px solid rgba(245,198,203,0.5); /* subtle pink border with transparency */
-    overflow-y: auto;          
+    border: 2px solid rgba(245,198,203,0.4); /* subtle semi-transparent border */
+    overflow-y: auto;          /* enable scrolling */
     z-index: 10;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -135,7 +136,7 @@ body {
     }
 }
 
-/* Scrollbar */
+/* Scrollbar styling */
 .letter::-webkit-scrollbar {
     width: 6px;
 }
