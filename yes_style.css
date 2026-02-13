@@ -78,27 +78,65 @@ body {
 /* Letter – upgraded style for more engagement */
 .letter {
     position: absolute;
-    top: 20px;                  /* slightly below flap */
-    left: 50%;                  /* center horizontally */
+    top: 20px;
+    left: 50%;
     transform: translateX(-50%);
-    width: 300px;               /* fits screen */
-    max-height: 400px;          /* new: limits vertical size */
-    padding: 20px 25px;
+    width: 320px;              /* slightly smaller for better screen fit */
+    max-height: 400px;         /* fits vertically */
+    padding: 25px 30px;
     background: linear-gradient(180deg, #fff8f0 0%, #ffe8e0 100%);
+    background-image: url('paper-texture.png'); /* optional paper texture */
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #d32f2f;
     font-family: "Nunito", sans-serif;
     font-size: 16px;
-    border-radius: 12px;
+    border-radius: 15px;       /* more rounded corners for a real letter */
     display: none;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25); /* deeper shadow */
     line-height: 1.6;
     text-align: left;
     border: 2px solid #f5c6cb;
+    overflow-y: auto;           /* scroll if too long */
     z-index: 10;
-    overflow-y: auto;           /* new: scroll if content is too long */
+    border-top-left-radius: 25px;   /* fancy top curves */
+    border-top-right-radius: 25px;
+    padding-top: 40px;          /* space for decorative hearts */
+    animation: popLetter 0.5s ease-out forwards;
 }
 
-/* Optional: scrollbar styling for love letter */
+/* Heart decoration */
+.letter::before {
+    content: "💖";
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+}
+
+/* Optional subtle hearts inside letter corners */
+.letter::after {
+    content: "💌";
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+/* Letter pop-up animation */
+@keyframes popLetter {
+    0% {
+        transform: translateX(-50%) translateY(30px) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar styling */
 .letter::-webkit-scrollbar {
     width: 6px;
 }
@@ -106,15 +144,6 @@ body {
 .letter::-webkit-scrollbar-thumb {
     background-color: #d32f2f;
     border-radius: 3px;
-}
-
-/* Decorative small heart on top-right of letter */
-.letter::before {
-    content: "💖";
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
 }
 
 /* Floating hearts */
