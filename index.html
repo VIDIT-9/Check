@@ -10,17 +10,35 @@
     <div class="container">
         <div class="gif_container">
              <img src="./gif20.gif" alt="cute gif">
-            <!-- <img src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" alt="Cute GIF"> -->
         </div>
-        <h1>Will you be my Valentine?</h1>
+
+        <h1 class="main-title">Will you be my Valentine? ❤️</h1>
 
         <div class="buttons">
             <button class="yes-button" onclick="handleYesClick()">Yes 💖</button>
             <button class="no-button" onclick="handleNoClick()">No 🙈</button>
         </div>
-
-        
     </div>
+
+    <!-- Floating hearts container -->
+    <div id="hearts-container"></div>
+
     <script src="script.js"></script>
+    <script>
+        // Floating hearts effect
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.textContent = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.fontSize = (20 + Math.random() * 20) + 'px';
+            heart.style.animationDuration = (2 + Math.random() * 3) + 's';
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        setInterval(createHeart, 400);
+    </script>
 </body>
 </html>
