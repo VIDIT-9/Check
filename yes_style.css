@@ -78,16 +78,15 @@ body {
 /* Letter */
 /* Letter – restored cream/pink style */
 /* Letter – soft cream/pink with slight transparency */
-/* Letter – more transparent and scrollable */
 .letter {
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 350px;              
-    max-height: 380px;         /* enough height to fit but allow scroll */
-    padding: 25px 30px;        
-    background: rgba(255, 248, 240, 0.65); /* more transparent cream/pink */
+    max-height: 380px;         
+    padding: 20px 30px 25px 30px; /* top padding reduced from 40px to 20px */
+    background: rgba(255, 248, 240, 0.65);
     color: #d32f2f;            
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
@@ -96,12 +95,11 @@ body {
     box-shadow: 0 12px 25px rgba(0,0,0,0.25); 
     line-height: 1.6;
     text-align: left;
-    border: 2px solid rgba(245,198,203,0.4); /* subtle semi-transparent border */
-    overflow-y: auto;          /* enable scrolling */
+    border: 2px solid rgba(245,198,203,0.4);
+    overflow-y: auto;          
     z-index: 10;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    padding-top: 40px;         
     animation: popLetter 0.5s ease-out forwards;
 }
 
