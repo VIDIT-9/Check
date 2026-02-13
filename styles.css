@@ -43,8 +43,9 @@ body {
     font-size: 1.5em;
     padding: 10px 20px;
     background-color: #d3d3d3;
-    color: black
-    ;
+    color: black;
+    transition: left 0.2s ease, top 0.2s ease;
+    position: relative;
     border: none;
     border-radius: 5px;
     cursor: pointer;
