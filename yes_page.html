@@ -29,21 +29,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const message = "You just made me the happiest person alive 🥹💖";
     const btn = document.getElementById("revealBtn");
-    const loveText = document.getElementById("loveText");
 
     btn.addEventListener("click", function() {
-        let i = 0;
-        loveText.innerHTML = "";
+        // Create a <p> element to show the message
+        const msgPara = document.createElement("p");
+        msgPara.textContent = message;
+        msgPara.classList.add("love_message");
+        msgPara.style.fontSize = "24px";
+        msgPara.style.marginTop = "20px";
 
-        function typeWriter() {
-            if (i < message.length) {
-                loveText.innerHTML += message.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-
-        typeWriter();
+        // Replace the button with the message
+        btn.parentNode.replaceChild(msgPara, btn);
     });
 
 });
